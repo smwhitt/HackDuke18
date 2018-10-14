@@ -39,6 +39,10 @@ public class Log extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        Car_Emissions test = new Car_Emissions();
+        test.createArray();
+
     }
 
 }
