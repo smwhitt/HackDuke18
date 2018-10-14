@@ -19,25 +19,28 @@ public class Log extends AppCompatActivity {
 
     private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText("Calendar");
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    startActivity(new Intent(Log.this, SettingsActivity.class));
-                    return true;
+    {
+        mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        mTextMessage.setText("Calendar");
+                        return true;
+                    case R.id.navigation_dashboard:
+                        startActivity(new Intent(Log.this, Dashboard.class));
+                        return true;
+                    case R.id.navigation_notifications:
+                        startActivity(new Intent(Log.this, SettingsActivity.class));
+                        return true;
+                }
+                return false;
             }
-            return false;
-        }
-    };
+        };
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

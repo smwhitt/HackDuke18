@@ -82,4 +82,6 @@
     <string name="date">Date</string>
     <string name="Calendar">Calendar</string>
     <string name="Events">Today\'s Events</string>
+    <string name="title_activity_contributor">Contributor</string>
+    <string name="Dash">Current Vehicles</string>
 </resources>

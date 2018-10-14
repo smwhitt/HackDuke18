@@ -27,6 +27,12 @@
                 android:value="e.smwhitt.myco2.Log" />
         </activity>
         <activity android:name=".Calendar" />
+        <activity
+            android:name=".Contributor"
+            android:label="@string/title_activity_contributor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Vehicles"></activity>
     </application>
 
 </manifest>
