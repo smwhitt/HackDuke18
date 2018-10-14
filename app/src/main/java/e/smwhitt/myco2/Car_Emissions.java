@@ -87,4 +87,15 @@ public class Car_Emissions {
         return carEmissions;
     }
 
+    public Map<String, Map<String, ArrayList<Double>>> SearchMake(Map<String, Map<String, Map<String, ArrayList<Double>>>> allCars, String carMake){
+        return allCars.get(carMake);
+    }
+
+    public Map<String, ArrayList<Double>> SearchModel(Map<String, Map<String, ArrayList<Double>>> carMakes, String carModel){
+        return carMakes.get(carModel);
+    }
+
+    public ArrayList<Double> SearchYear(Map<String, ArrayList<Double>> carModels, String carYear){
+        return carModels.get(carYear);
+    }
 }
