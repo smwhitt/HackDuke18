@@ -84,4 +84,6 @@
     <string name="Events">Today\'s Events</string>
     <string name="title_activity_contributor">Contributor</string>
     <string name="Dash">Current Vehicles</string>
+    <string name="graphProgress">Your Progress!</string>
+    <string name="plan">Plans for Today?</string>
 </resources>

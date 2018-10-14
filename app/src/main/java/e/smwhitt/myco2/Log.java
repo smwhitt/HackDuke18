@@ -50,27 +50,10 @@ public class Log extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
 
-//        MonthLoader.MonthChangeListener mMonthChangeListener = new MonthLoader.MonthChangeListener() {
-//            @Override
-//            public List<WeekViewEvent> onMonthChange(int newYear, int newMonth) {
-//                // Populate the week view with some events.
-//                List<WeekViewEvent> events = getEvents(newYear, newMonth);
-//                return events;
-//            }
-//        };
-//
-//        // Get a reference for the week view in the layout.
-//        mWeekView = (WeekView) findViewById(R.id.weekView);
-//
-//        // Set an action when any event is clicked.
-//        mWeekView.setOnEventClickListener(mEventClickListener);
-//
-//        // The week view has infinite scrolling horizontally. We have to provide the events of a
-//        // month every time the month changes on the week view.
-//        mWeekView.setMonthChangeListener(mMonthChangeListener);
-//
-//        // Set long press listener for events.
-//        mWeekView.setEventLongPressListener(mEventLongPressListener);
+    public void createNewEvent(View view) {
+        Intent event = new Intent(this, Calendar.class);
+        startActivity(event);
     }
 }
